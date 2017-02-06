@@ -5,6 +5,10 @@
     <ClCompile Include="Item 01 Pointers and References.cpp">
       <Filter>1 Basics</Filter>
     </ClCompile>
+    <ClCompile Include="Item 02 CPP style casts.cpp" />
+    <ClCompile Include="Item 03 Arrays are not polymorphic.cpp">
+      <Filter>1 Basics</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <Filter Include="0 Introduction">
