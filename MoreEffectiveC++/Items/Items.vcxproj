@@ -145,6 +145,7 @@
     <ClCompile Include="Item 01 Pointers and References.cpp" />
     <ClCompile Include="Item 02 CPP style casts.cpp" />
     <ClCompile Include="Item 03 Arrays are not polymorphic.cpp" />
+    <ClCompile Include="Item 04 Dont just make default ctors.cpp" />
     <ClCompile Include="Main.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
