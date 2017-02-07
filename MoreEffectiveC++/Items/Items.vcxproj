@@ -146,6 +146,10 @@
     <ClCompile Include="Item 02 CPP style casts.cpp" />
     <ClCompile Include="Item 03 Arrays are not polymorphic.cpp" />
     <ClCompile Include="Item 04 Dont just make default ctors.cpp" />
+    <ClCompile Include="Item 05 User defined conversion functions.cpp" />
+    <ClCompile Include="Item 06 Prefix and Postfix.cpp" />
+    <ClCompile Include="Item 07 Never overload logical AND OR and comma.cpp" />
+    <ClCompile Include="Item 08 new and delete.cpp" />
     <ClCompile Include="Main.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

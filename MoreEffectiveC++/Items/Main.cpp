@@ -1,7 +1,13 @@
+#include <iostream>
+using std::cout;
+using std::endl;
+
+
 namespace item02
 {
     void test();
 }
+
 
 int main()
 {

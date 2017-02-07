@@ -14,6 +14,18 @@
     <ClCompile Include="Item 04 Dont just make default ctors.cpp">
       <Filter>1 Basics</Filter>
     </ClCompile>
+    <ClCompile Include="Item 05 User defined conversion functions.cpp">
+      <Filter>2 Operators</Filter>
+    </ClCompile>
+    <ClCompile Include="Item 06 Prefix and Postfix.cpp">
+      <Filter>2 Operators</Filter>
+    </ClCompile>
+    <ClCompile Include="Item 07 Never overload logical AND OR and comma.cpp">
+      <Filter>2 Operators</Filter>
+    </ClCompile>
+    <ClCompile Include="Item 08 new and delete.cpp">
+      <Filter>2 Operators</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <Filter Include="0 Introduction">
