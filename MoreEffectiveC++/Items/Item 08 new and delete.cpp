@@ -48,7 +48,9 @@
  *      
  *
  * Summary:
- * 
+ *  - operator new is whats called when you do a new
+ *  - It calls the new operator to allocate memory, then invokes ctor
+ *  - 
  */
 
 #include <string>
