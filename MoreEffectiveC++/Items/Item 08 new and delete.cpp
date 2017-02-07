@@ -5,23 +5,47 @@
  *  - i.e. string* st = new string("Hello");
  *  - Built into the language
  *  - Does 2 things
- *      - Allocates enough memory to hold the object (invoke operator new)
+ *      - Allocates enough memory to hold the object (by invoke operator new)
  *      - Calls the constructor on the object to initialize the now allocated memory
  * 
  * operator new
  *  - void* operator new (size_t size)
  *  - Invoked from new operator
  *  - Allocates memory, doesnt call any ctor
- *  - Can call it itself to just allocate some memory for you
+ *  - Can call it by itself to just allocate some memory for you
  *  - Can modify it to default initialize the memory
  * 
  * placement new
- *  
+ *  - void* operator new (size_t, void* location)
+ *  - Allows you to pass a pointer to some pre-existing allocated memory
+ *  - Will just return a pointer to that memory
+ *  - Operator new will then just invoke ctor on that area
+ *  - TLDR: Replaces operator new in the 1st stage of new operator, therefore not allocating new memory, just using provided memory, then calls ctor
+ *      - Basically just lets you call ctor directly on some object, to initialize some pre allocated memory
+ *  NOTE:   
+ *      - Don't free up memory from placement new with delete operator, undefined
+ *      - Instead invoke dtor on the object there
+ *      - Then call operator delete
+ *
+ *    
  * 
  * delete operator
+ *  - delete ptr;
+ *  - Will call destructor of object ptr points to
+ *  - Deallocate memory (via calling operator delete)
  * 
- * oeprator delete
+ * operator delete
+ *  - void operator delete (void* memory)
+ *  - Will deallocate the memory
+ *  - Invoke this directly if you are just dealloacting some raw allocted memory that isn't initialized with an object
+ *  
  * 
+ * What each does, in TLDR:
+ *  - invoke new operator:                          Allocate memory and initialize object on heap
+ *  - invoke operator new:                          Only allocate memory
+ *  - modify operator new and invoke new operator:  Customize how memory is allocted and then initialize object on heap (i.e. pre init memory with vals)
+ *  - invoke placement new:                         Initializre object in pre allocated memory
+ *      
  *
  * Summary:
  * 
