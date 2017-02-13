@@ -54,6 +54,9 @@
  */
 
 #include <string>
+#include <iostream>
+#include <memory>
+
 namespace item08
 {
     std::string *ps = new std::string("test");  // Would invoke new operator -> then invoke operator new -> then invoke string::string() ctor
@@ -63,12 +66,28 @@ namespace item08
     void *raw_memory = operator new(sizeof(std::string));       // Allocate enough memory for a string
     // Invoke std::string::string("test") ctor on *raw_memory
     std::string *pss = static_cast<std::string*>(raw_memory);   // Make your string pointer point to the new string in raw allocated memory
+
+    class Widget
+    {
+    public:
+
+        // Defining my own operator new that decorates global operator new before its called.
+        void* operator new(size_t size)
+        {
+            std::cout << "NEW" <<  std::endl;
+            return ::operator new(size);
+        }
+        void operator delete(void* memory)
+        {
+            std::cout << "DELETE" << std::endl;
+            ::operator delete(memory);
+        }
+    };
     
 
     void test()
     {
-        
-        
+        std::unique_ptr<Widget> pW = std::make_unique<Widget>();
     }
     
 }

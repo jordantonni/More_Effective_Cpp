@@ -26,6 +26,9 @@
     <ClCompile Include="Item 08 new and delete.cpp">
       <Filter>2 Operators</Filter>
     </ClCompile>
+    <ClCompile Include="Item 19 Temporary objects.cpp">
+      <Filter>4 Efficiency</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <Filter Include="0 Introduction">

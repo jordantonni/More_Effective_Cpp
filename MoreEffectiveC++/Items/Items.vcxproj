@@ -150,6 +150,7 @@
     <ClCompile Include="Item 06 Prefix and Postfix.cpp" />
     <ClCompile Include="Item 07 Never overload logical AND OR and comma.cpp" />
     <ClCompile Include="Item 08 new and delete.cpp" />
+    <ClCompile Include="Item 19 Temporary objects.cpp" />
     <ClCompile Include="Main.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
