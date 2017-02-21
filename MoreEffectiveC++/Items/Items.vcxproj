@@ -150,8 +150,36 @@
     <ClCompile Include="Item 06 Prefix and Postfix.cpp" />
     <ClCompile Include="Item 07 Never overload logical AND OR and comma.cpp" />
     <ClCompile Include="Item 08 new and delete.cpp" />
+    <ClCompile Include="Item 09 Destructors.cpp" />
+    <ClCompile Include="Item 10 Prevent ctor resource leaks.cpp" />
+    <ClCompile Include="Item 11 Prevent exceptions leaving dtors.cpp" />
+    <ClCompile Include="Item 12 Exception throwing and param passing.cpp" />
+    <ClCompile Include="Item 13 Catch exceptions by ref.cpp" />
+    <ClCompile Include="Item 14 Exception specification.cpp" />
+    <ClCompile Include="Item 15 Exception handling costs.cpp" />
+    <ClCompile Include="Item 16 80-20 Rule.cpp" />
+    <ClCompile Include="Item 17 Lazy Evaluation.cpp" />
+    <ClCompile Include="Item 18 Amortize expected operations.cpp" />
     <ClCompile Include="Item 19 Temporary objects.cpp" />
+    <ClCompile Include="Item 20 Return value optimization.cpp" />
+    <ClCompile Include="Item 21 Overload to stop implicit type conversions.cpp" />
+    <ClCompile Include="Item 22 Prefer free function operators over member ops.cpp" />
+    <ClCompile Include="Item 23 Alternative Libraries.cpp" />
+    <ClCompile Include="Item 25 Virtual ctors and free functions.cpp" />
+    <ClCompile Include="Item 26 Limits objects of class.cpp" />
+    <ClCompile Include="Item 27 Requiring heap based objects.cpp" />
+    <ClCompile Include="Item 28 Smart Pointers.cpp" />
+    <ClCompile Include="Item 29 Reference counting.cpp" />
+    <ClCompile Include="Item 30 Proxy Classes.cpp" />
+    <ClCompile Include="Item 31 Double Dispatch.cpp" />
+    <ClCompile Include="Item 32 Program in future tense.cpp" />
+    <ClCompile Include="Item 33 Make non-leaf classes abstract.cpp" />
+    <ClCompile Include="Item 34 Combine C with CPP.cpp" />
+    <ClCompile Include="Item 35 Language Standard.cpp" />
     <ClCompile Include="Main.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Item 24 Cost of virtual functions inheritance and RTTI.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

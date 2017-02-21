@@ -29,6 +29,81 @@
     <ClCompile Include="Item 19 Temporary objects.cpp">
       <Filter>4 Efficiency</Filter>
     </ClCompile>
+    <ClCompile Include="Item 09 Destructors.cpp">
+      <Filter>3 Exceptions</Filter>
+    </ClCompile>
+    <ClCompile Include="Item 10 Prevent ctor resource leaks.cpp">
+      <Filter>3 Exceptions</Filter>
+    </ClCompile>
+    <ClCompile Include="Item 11 Prevent exceptions leaving dtors.cpp">
+      <Filter>3 Exceptions</Filter>
+    </ClCompile>
+    <ClCompile Include="Item 12 Exception throwing and param passing.cpp">
+      <Filter>3 Exceptions</Filter>
+    </ClCompile>
+    <ClCompile Include="Item 13 Catch exceptions by ref.cpp">
+      <Filter>3 Exceptions</Filter>
+    </ClCompile>
+    <ClCompile Include="Item 14 Exception specification.cpp">
+      <Filter>3 Exceptions</Filter>
+    </ClCompile>
+    <ClCompile Include="Item 15 Exception handling costs.cpp">
+      <Filter>3 Exceptions</Filter>
+    </ClCompile>
+    <ClCompile Include="Item 16 80-20 Rule.cpp">
+      <Filter>4 Efficiency</Filter>
+    </ClCompile>
+    <ClCompile Include="Item 17 Lazy Evaluation.cpp">
+      <Filter>4 Efficiency</Filter>
+    </ClCompile>
+    <ClCompile Include="Item 18 Amortize expected operations.cpp">
+      <Filter>4 Efficiency</Filter>
+    </ClCompile>
+    <ClCompile Include="Item 20 Return value optimization.cpp">
+      <Filter>4 Efficiency</Filter>
+    </ClCompile>
+    <ClCompile Include="Item 21 Overload to stop implicit type conversions.cpp">
+      <Filter>4 Efficiency</Filter>
+    </ClCompile>
+    <ClCompile Include="Item 22 Prefer free function operators over member ops.cpp">
+      <Filter>4 Efficiency</Filter>
+    </ClCompile>
+    <ClCompile Include="Item 23 Alternative Libraries.cpp">
+      <Filter>4 Efficiency</Filter>
+    </ClCompile>
+    <ClCompile Include="Item 25 Virtual ctors and free functions.cpp">
+      <Filter>5 Techniques</Filter>
+    </ClCompile>
+    <ClCompile Include="Item 26 Limits objects of class.cpp">
+      <Filter>5 Techniques</Filter>
+    </ClCompile>
+    <ClCompile Include="Item 27 Requiring heap based objects.cpp">
+      <Filter>5 Techniques</Filter>
+    </ClCompile>
+    <ClCompile Include="Item 28 Smart Pointers.cpp">
+      <Filter>5 Techniques</Filter>
+    </ClCompile>
+    <ClCompile Include="Item 29 Reference counting.cpp">
+      <Filter>5 Techniques</Filter>
+    </ClCompile>
+    <ClCompile Include="Item 30 Proxy Classes.cpp">
+      <Filter>5 Techniques</Filter>
+    </ClCompile>
+    <ClCompile Include="Item 31 Double Dispatch.cpp">
+      <Filter>5 Techniques</Filter>
+    </ClCompile>
+    <ClCompile Include="Item 32 Program in future tense.cpp">
+      <Filter>6 Miscellany</Filter>
+    </ClCompile>
+    <ClCompile Include="Item 33 Make non-leaf classes abstract.cpp">
+      <Filter>6 Miscellany</Filter>
+    </ClCompile>
+    <ClCompile Include="Item 34 Combine C with CPP.cpp">
+      <Filter>6 Miscellany</Filter>
+    </ClCompile>
+    <ClCompile Include="Item 35 Language Standard.cpp">
+      <Filter>6 Miscellany</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <Filter Include="0 Introduction">
@@ -52,5 +127,10 @@
     <Filter Include="6 Miscellany">
       <UniqueIdentifier>{53ac3d84-fb3f-48f5-9903-e5eebf994b38}</UniqueIdentifier>
     </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Item 24 Cost of virtual functions inheritance and RTTI.cpp">
+      <Filter>4 Efficiency</Filter>
+    </None>
   </ItemGroup>
 </Project>

@@ -18,6 +18,8 @@
 #include <iostream>
 #include <string>
 
+
+
 namespace item19
 {
     struct Widget
@@ -62,4 +64,5 @@ namespace item19
 
         Widget other = foo();
     }
+
 }
