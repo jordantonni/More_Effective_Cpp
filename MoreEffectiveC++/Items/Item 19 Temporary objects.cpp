@@ -1,68 +1,27 @@
 /*
- *  Help the Return Value Optimization
- *  
- *  
- * Return object from a function has its own memory. 
- * A copy of the object to return is made and put into this area.
+ * Temporary Objects
  * 
- * To remove this unnecessary copy of a local object to the functions' return value object
- *  - Construct the return object in the return statement via its ctor
- *  - i.e. return Widget("Value");
- *
+ * Temp objects arise when a non-heap object is created but unnamed.
+ * 
+ * 1) Implicit type conversion for argument to parameter
+ *      - Argument type is converted to parameter type using its constructor, becoming a temporary object
+ *      - Temp object is destroyed when function goes out of scope
+ *      
+ *  Note: Only const references can bind to temp objects, non-const references cannot!
+ *      Why?
+ *          - If a temporary object was created, then bound to a non-const reference, the function would change the referenced object
+ *            but the referenced object is only a temp that is deleted at the end of the function. 
+ *            
+ *          - A const reference cannot be modified, so the caller of the function doesnt expect whatever he passes to it to be modified
+ *            anyway, so this is fine!
+ * 
+ * 2) Functions return objects
+ *      - The return value of a function is a temporary.
+ *      - This object is constructed, copied to the call site object (if any), then destructed each time the function is called.
+ * 
  *
  * Summary:
- *  - Don't create function local object then return them
- *  - Instead, Create the object and return constructor arguments in the same return statement.
+ *  - Anytime you see a const reference as a parameter, a temp object can be created for that to bind to
+ *  - Anytime a function returns a value, a temporary is object is created for that ( Not always due to RVO)
  * 
  */
-#include <iostream>
-#include <string>
-
-
-
-namespace item19
-{
-    struct Widget
-    {
-        std::string x;
-
-        Widget(std::string v = "Temp")
-            : x { v }
-        {
-            std::cout << "Widget " << x << " ctor()" << std::endl;
-        }
-
-        Widget(const Widget& rhs)
-            : x{ rhs.x + "-COPIED" }
-        {
-            std::cout << "Widget " << rhs.x << " copy ctor()" << std::endl;
-        }
-
-        ~Widget()
-        {
-            std::cout << "Widget " << x << " dtor()" << std::endl;
-        }
-    };
-
-    // RVO enabled  
-    Widget foo()
-    {
-        return Widget("ret"); // Creates a temporary Widget object. Return value optimization should create this object in the memory of object
-        // Invoking this function
-    }
-
-    // Non RVO 
-    Widget bar()
-    {
-        Widget ret("ret"); // Creates local variable ret
-        return ret; // Copies it into return value of bar function 
-    } // destroy local ret and return value object && copy return value into the object invoking this bar() function
-
-    void test()
-    {
-        Widget ret = bar();
-
-        Widget other = foo();
-    }
-
-}

@@ -10,6 +10,11 @@
  *  - Fetch and increment
  *  - Less efficient
  *  - const int& operator++(int)
+ *  
+ *  
+ *  NOTE: Post fix operators always return a const
+ *      Why?
+ *          - Stops chaning ( w++++ ) which would only increment once, not twice, due to postincrement returning previous value
  *
  *
  * Note:

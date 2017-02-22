@@ -30,7 +30,7 @@ namespace item04
 
     void test()
     {
-        //         Widget* fail = new Widget[5];    Fails as it tries to call default ctor
+//                Widget* fail = new Widget[5];    //Fails as it tries to call default ctor
 
         Widget* bestWidgets[10]; // Array of 10 pointers to Widget on stack, doesnt call ctor
         Widget** moreWidgets = new Widget*[10]; // Pointer to an array of 10 pointers to Widget on heap, same
