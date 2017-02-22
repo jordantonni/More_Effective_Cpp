@@ -8,7 +8,8 @@
  *  - Don't need to create and return a temporary
  *  - Better support for RVO
  *
- * Summary:
+ * Summary: 
+ *  - Use operator+= over operator=
  *  
  *
  */
