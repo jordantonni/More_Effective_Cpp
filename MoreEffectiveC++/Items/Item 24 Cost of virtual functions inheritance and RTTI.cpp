@@ -41,6 +41,7 @@
  *  Virtual Base Class:
  *      - If the same base class can be got to in multiple ways using multiple inheritance, that base class will be copied twice, NOT WHAT YOU WANT
  *      - Solution: use virtual inheritance on the base class
+ *          - Implemented via each class that virtually inherits a base having a pointer to the virtual base class
  *      
  *  Run Time Type Identification (RTTI):
  *      - Gives information on the type of an object at run time
@@ -49,6 +50,7 @@
  *      
  *
  * Summary:
- *  
+ *      - Main cost of having virtual functions is that it disallows inlining of virtual function invocation
+ *      
  *
  */

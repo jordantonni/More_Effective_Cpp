@@ -2,7 +2,7 @@
 using std::cout;
 using std::endl;
 
-namespace item19
+namespace item30
 {
     void test();
 }
@@ -10,7 +10,7 @@ namespace item19
 
 int main()
 {
-    item19::test();
+    item30::test();
 
     return 0;
 }
