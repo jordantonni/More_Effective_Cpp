@@ -10,7 +10,7 @@
  *  
  * So, Get the common features, put that into an abstract base class (interface)
  *  - Have both inherit from that
- *  - You have now explicity stated programatically the abstracts that are common between the classes, and made it into an interface
+ *  - You have now explicity stated programatically the abstractions that are common between the classes, and made it into an interface
  *
  *
  * Summary:
